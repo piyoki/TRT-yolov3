@@ -3,7 +3,15 @@
 repo(){
 cd ~
 git clone https://github.com/yqlbu/TRT-yolov3
-cd TRT-yolov3/yolov3_onnx
+cd TRT-yolov3/
+dependencies
+}
+
+dependencies(){
+pip3 install -r requirements.txt
+sh yolov3_onnx/install_pycuda.sh
+cd yolov3_onnx/
+start
 }
 
 start(){
@@ -18,6 +26,8 @@ python3 yolov3_to_onnx.py --model yolov3-416
 echo "[ENGINE]  Converting from ONNX to TensorRT Engine in 3 secs ..."
 sleep 3
 python3 onnx_to_tensorrt.py --model yolov3-416
+echo "[ENGINE]  Conversion finished ..."
+cd ..
 }
 
 menu(){
@@ -33,8 +43,8 @@ echo "
 |                                                 |
 +-------------------------------------------------+
 "
-read -p ' ->  Confirm to continue the process? [y/n]: ' VAL
-echo " ->  You choose $VAL."
+read -p '[BASH]  Confirm to continue the process? [y/n]: ' VAL
+echo "[BASH]  You choose $VAL."
 case "$VAL" in 
     [yY])
         echo "[INFO]  Download will start in 3 seconds."
@@ -53,4 +63,3 @@ esac
 
 menu
 repo
-start
