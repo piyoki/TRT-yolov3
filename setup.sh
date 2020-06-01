@@ -23,13 +23,21 @@ echo "[INFO]  Start downloading YOLOv3 cfg and weights ..."
 echo "[INFO]  Download starts in 3 secs ..."
 sleep 3
 sh download.sh
-echo "[ENGINE]  Converting Yolo Weight to ONNX model in 3 secs ..."
+echo "[ENGINE]  Converting Yolov3 Weight to ONNX model in 3 secs ..."
 sleep 3
 python3 yolov3_to_onnx.py --model yolov3-416
 echo "[ENGINE]  Converting from ONNX to TensorRT Engine in 3 secs ..."
 sleep 3
 python3 onnx_to_tensorrt.py --model yolov3-416
+echo "[ENGINE]  Converting Yolov3-tiny Weight to ONNX model in 3 secs ..."
+sleep 3
+python3 yolov3_to_onnx.py --model yolov3-tiny-416
+echo "[ENGINE]  Converting from ONNX to TensorRT Engine in 3 secs ..."
+sleep 3
+python3 onnx_to_tensorrt.py --model yolov3-tiny-416
 echo "[ENGINE]  Conversion finished ..."
+echo "[ENGINE]  YOLOv3 and YOLOv3-tiny have been successfully converted to TRT"
+echo "[INFO]  Enjoy!"
 cd ..
 }
 
@@ -53,20 +61,21 @@ case "$VAL" in
         echo "[INFO]  Download will start in 3 seconds."
         sleep 3
         echo "[INFO]  Start!"
-        # start
+        repo
+        dependencies
+        media
+        start
+        cd ..
         ;;
     [nN])
         echo "[INFO]  Installation ends..."
+        exit 0
         ;;
     *)
         echo "[ERROR] Please enter corrent input"
+        exit 0
         ;;
 esac
 }
 
 menu
-repo
-dependencies
-media
-start
-cd ..
