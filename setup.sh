@@ -19,7 +19,7 @@ sh data/download.sh
 start(){
 # add github part
 cd yolov3_onnx/
-echo "[INFO]  Start downloading YOLOv3 cfg and weights ..."
+echo "[BASH]  Start downloading YOLOv3 cfg and weights ..."
 echo "[INFO]  Download starts in 3 secs ..."
 sleep 3
 sh download.sh
