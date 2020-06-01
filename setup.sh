@@ -10,7 +10,6 @@ dependencies(){
 sudo apt install protobuf-compiler libprotoc-dev -y
 sudo pip3 install -r requirements.txt
 sh yolov3_onnx/install_pycuda.sh
-cd yolov3_onnx/
 }
 
 media(){
@@ -19,6 +18,7 @@ sh data/download.sh
 
 start(){
 # add github part
+cd yolov3_onnx/
 echo "[INFO]  Start downloading YOLOv3 cfg and weights ..."
 echo "[INFO]  Download starts in 3 secs ..."
 sleep 3
