@@ -8,7 +8,8 @@ dependencies
 }
 
 dependencies(){
-pip3 install -r requirements.txt --user
+sudo apt install protobuf-compiler libprotoc-dev -y
+sudo pip3 install -r requirements.txt
 sh yolov3_onnx/install_pycuda.sh
 cd yolov3_onnx/
 start
