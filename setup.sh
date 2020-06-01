@@ -4,7 +4,6 @@ repo(){
 cd ~
 git clone https://github.com/yqlbu/TRT-yolov3
 cd TRT-yolov3/
-dependencies
 }
 
 dependencies(){
@@ -12,7 +11,10 @@ sudo apt install protobuf-compiler libprotoc-dev -y
 sudo pip3 install -r requirements.txt
 sh yolov3_onnx/install_pycuda.sh
 cd yolov3_onnx/
-start
+}
+
+media(){
+sh data/download.sh
 }
 
 start(){
@@ -64,3 +66,7 @@ esac
 
 menu
 repo
+dependencies
+media
+start
+cd ..
