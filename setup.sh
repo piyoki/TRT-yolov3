@@ -13,10 +13,6 @@ sh yolov3_onnx/set_cuda.sh
 sh yolov3_onnx/install_pycuda.sh
 }
 
-media(){
-sh data/download.sh
-}
-
 start(){
 # add github part
 cd yolov3_onnx/
@@ -64,7 +60,6 @@ case "$VAL" in
         echo "[INFO]  Start!"
         repo
         dependencies
-        media
         start
         cd ..
         ;;
