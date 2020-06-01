@@ -8,7 +8,7 @@ dependencies
 }
 
 dependencies(){
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt --user
 sh yolov3_onnx/install_pycuda.sh
 cd yolov3_onnx/
 start
