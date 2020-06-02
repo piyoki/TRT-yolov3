@@ -133,6 +133,16 @@ python3 detector.py --image --filename ./data/images/human.jpg
 
 Simply add **--height** and **--width** flags to specify the size of the input frames
 
+#### YOLOv3-tiny
+
+To change the model to YOLOv3-tiny, specify the model with the flag **--model**
+
+e.g. 
+
+```bash
+python3 detector.py --file --filename ./data/videos/cars.mp4 --model yolov3-tiny-416 --runtime
+```
+
 Training
 --------
 
