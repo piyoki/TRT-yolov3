@@ -70,7 +70,10 @@ Simply run the following command, the script will lead you to the installation p
 $ bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/setup.sh)
 ```
 
-**Notes:** If the script have successfully ran and finished without any errors, you may move on to test the results in the section below.
+**Notes:** 
+
+- The script will run for around 10-15 minutes. Please wait with patience.
+- If the script have successfully ran and finished without any errors, you may move on to test the results in the section below.
 
 <a name="installation"></a>
 
