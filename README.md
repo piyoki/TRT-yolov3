@@ -35,7 +35,7 @@ The demos below are tested with the default YOLOv3-416 model, you may change to 
 
 ![](demo_screenshots/TRT-yolov3-image.png)
 
-#### Demo 2: Dector with Video Input
+#### Demo 2: Detector with Video Input
 
 <img src="https://media.giphy.com/media/ZFFTexYOXbFQ3PodPM/giphy.gif" width="1280">
 
