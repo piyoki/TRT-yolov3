@@ -38,7 +38,7 @@ The following packages are required for this project. If you are using a **x86 P
 
 For **Jetson User**, CUDA, cuDNN, and TensorRT are pre-installed with JetPack. Assuming you are using JetPack >=4.2, you should be good to go.
 
-- Python==3.6
+- Python>=3.6
 - Onnx==1.4.1
 - Protobuf==3.8.0
 - Pycuda==2019.1.2
@@ -61,7 +61,7 @@ Simply run the following command, the script will lead you to the installation p
 bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/setup.sh)
 ```
 
-**Notes:** If the script successfully ran and finished without any errors, you may move on to test the results in the section below.
+**Notes:** If the script have successfully ran and finished without any errors, you may move on to test the results in the section below.
 
 <a name="installation"></a>
 
@@ -122,7 +122,7 @@ python3 detector.py --image --filename ./data/images/human.jpg
 
 #### Change input size
 
-Simply add the **--height** and **--width** flags to specify the size of the input frames
+Simply add **--height** and **--width** flags to specify the size of the input frames
 
 Training
 --------
