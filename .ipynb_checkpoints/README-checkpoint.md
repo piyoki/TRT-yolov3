@@ -37,8 +37,9 @@ The demos below are tested with the default YOLOv3-416 model, you may change to 
 
 #### Demo 2: Dector with Video Input
 
-<img src="https://media.giphy.com/media/lrDdYE8eCNgPTWHvIe/giphy.gif" width="1000">
+<img src="https://media.giphy.com/media/ZFFTexYOXbFQ3PodPM/giphy.gif" width="1280">
 
+<img src="https://media.giphy.com/media/ekpDNDeR2RZgf9cSRK/giphy.gif" width =1280>
 
 
 Dependencies
