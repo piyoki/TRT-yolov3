@@ -9,7 +9,7 @@ cd TRT-yolov3/
 dependencies(){
 sudo apt install protobuf-compiler libprotoc-dev -y
 sudo pip3 install -r requirements.txt
-if [ "$?" -eq "0" ]
+if [ "$?" -ne "0" ]
 then
    echo "Installation packages failed, quitting ..."
    exit 0
