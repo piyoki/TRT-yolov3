@@ -65,9 +65,12 @@ case "$VAL" in
         echo "[INFO]  Download will start in 3 seconds."
         sleep 3
         echo "[INFO]  Start!"
+        start=`date +%s`
         repo
         dependencies
         start
+        end=`date +%s`
+        echo "[BASH]  Execution time was `expr $end - $start` seconds"
         cd ..
         ;;
     [nN])
