@@ -6,6 +6,18 @@
 
 *** Update Time: 2020/06/02
 
+As of today, YOLOv3 stays one of the most popular object detection model architectures. Since NVIDIA already provided an Object Detection With The ONNX TensorRT Backend In Python (YOLOv3) sample code, it is possibly to implement YOLOv3 with TensorRT to massively accelerate the inference runtime. This repo demonstrates an example to apply TensorRT techniques to real-time Object Detection with YOLOv3, and YOLOv3-tiny models.
+
+I am working on adding the training tool to the repo so that you may implement TensorRT with YOLO models that are trained with custom dataset. It will be released soon.
+
+**Notes:** All the demos below are done on my Jetson AGX Xavier DevKit. Here is the quick wrap-up from the demo results:
+
+- Run the detector with YOLOv3-416 model at 15~16 FPS on Jetson AGX Xavier
+- Run the detector with YOLOv3-tiny-416 model at 46~53 FPS on Jetson AGX Xavier
+
+Furthermore, all demos should work on x86_64 PC with NVIDIA GPU(s) as well. Make sure you have all the software dependencies installed correctly on your machine.
+
+
 Table of Contents
 -----------------
 
@@ -43,9 +55,13 @@ For **Jetson User**, CUDA, cuDNN, and TensorRT are pre-installed with JetPack. A
 Installation
 ------------
 
+Simply run the following command, the script will lead you to the installation process.
+
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/setup.sh)
 ```
+
+**Notes:** If the script successfully ran and finished without any errors, you may move on to test the results in the section below.
 
 <a name="installation"></a>
 
@@ -103,7 +119,6 @@ python3 detector.py --image --filename ./data/images/human.jpg
 **Notes:** The project includes four sample images for testing (dog_1.jpg, dog_2.jpg, human.jpg). They are located in **./data/images/**
 
 <a name="usage"></a>
----
 
 #### Change input size
 
