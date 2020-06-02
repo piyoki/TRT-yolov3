@@ -71,7 +71,6 @@ case "$VAL" in
         start
         end=`date +%s`
         echo "[BASH]  Execution time was `expr $end - $start` seconds"
-        cd ..
         ;;
     [nN])
         echo "[INFO]  Installation ends..."
