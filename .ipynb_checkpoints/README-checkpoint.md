@@ -67,7 +67,7 @@ Installation
 Simply run the following command, the script will lead you to the installation process.
 
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/setup.sh)
+$ bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/setup.sh)
 ```
 
 **Notes:** If the script have successfully ran and finished without any errors, you may move on to test the results in the section below.
@@ -108,13 +108,13 @@ Below are the cases where you can run the detector with different input stream s
 #### Run real-time detector with a webcam
 
 ```bash
-python3 detector.py --usb --vid 0 --runtime
+$ python3 detector.py --usb --vid 0 --runtime
 ```
 
 #### Run the detector with an input video file
 
 ```bash
-python3 detector.py --file --filename ./data/videos/cars.mp4 --runtime
+$ python3 detector.py --file --filename ./data/videos/cars.mp4 --runtime
 ```
 
 **Notes:** The project includes four sample videos for testing (cars.mp4, shinjuku.mp4, ped.mp4, and passby.mp4). They are located in **./data/videos/**
@@ -122,7 +122,7 @@ python3 detector.py --file --filename ./data/videos/cars.mp4 --runtime
 #### Run the detector with an image input
 
 ```bash
-python3 detector.py --image --filename ./data/images/human.jpg
+$ python3 detector.py --image --filename ./data/images/human.jpg
 ```
 
 **Notes:** The project includes four sample images for testing (dog_1.jpg, dog_2.jpg, human.jpg). They are located in **./data/images/**
@@ -140,7 +140,7 @@ To change the model to YOLOv3-tiny, specify the model with the flag **--model**
 e.g. 
 
 ```bash
-python3 detector.py --file --filename ./data/videos/cars.mp4 --model yolov3-tiny-416 --runtime
+$ python3 detector.py --file --filename ./data/videos/cars.mp4 --model yolov3-tiny-416 --runtime
 ```
 
 Training
