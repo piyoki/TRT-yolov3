@@ -19,7 +19,6 @@ then
 else
     continue
 fi
-sh yolov3_onnx/install_pycuda.sh
 }
 
 download_samples(){
