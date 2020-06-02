@@ -7,6 +7,8 @@ cd TRT-yolov3/
 }
 
 dependencies(){
+sudo apt install python3-pip -y
+sudo -H pip3 install --upgrade pip
 sudo apt install protobuf-compiler libprotoc-dev -y
 sudo pip3 install -r requirements.txt
 if [ "$?" -ne "0" ]
