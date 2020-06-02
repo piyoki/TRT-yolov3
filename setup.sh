@@ -9,6 +9,13 @@ cd TRT-yolov3/
 dependencies(){
 sudo apt install protobuf-compiler libprotoc-dev -y
 sudo pip3 install -r requirements.txt
+if [ "$?" -eq "0" ]
+then
+   echo "Installation packages failed, quitting ..."
+   exit 0
+else
+    continue
+fi
 sh yolov3_onnx/set_cuda.sh
 sh yolov3_onnx/install_pycuda.sh
 }
