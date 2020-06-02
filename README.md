@@ -52,9 +52,62 @@ bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/setup
 Usage
 -----
 
-Command Chart
+CLI (Command Line Interface) Reference:
+
+|    flags   |                             usage                            |
+|:----------:|:------------------------------------------------------------:|
+|   --model  |                    chose a network to load                   |
+|   --file   |  use a video file as input (remember to also set --filename) |
+| --filename |                        video file name                       |
+|    --usb   |          use USB webcam (remember to also set --vid)         |
+|    --vid   |             device # of USB webcam (/dev/video?)             |
+|   --rtsp   |          use IP Camera (remember to also set --uri)          |
+|    --uri   |            RTSP URI, e.g. rtsp://192.168.1.64:554            |
+|   --image  | use an image file as input (remember to also set --filename) |
+|   --width  |                          image width                         |
+|  --height  |                         image height                         |
+|  --runtime |             display detailed runtime information             |
+
+### Basic Usage
+
+When the detector runs, the program would do the following:
+
+>**(1)** deserialize/load the TensorRT engine
+
+>**(2)** manage CUDA memory buffers using “pycuda”
+
+>**(3)** preprocess input image, run inference and postprocess YOLOv3 detection output.
+
+Below are the cases where you can run the detector with different input stream sources:
+
+#### Run real-time detector with a webcam
+
+```bash
+python3 detector.py --usb --vid 0
+```
+
+#### Run the detector with an input video file
+
+```bash
+python3 detector.py --file --filename ./data/videos/cars.mp4
+```
+
+**Notes:** The project includes four sample videos for testing (cars.mp4, shinjuku.mp4, ped.mp4, and passby.mp4). They are located in **./data/videos/**
+
+#### Run the detector with an image input
+
+```bash
+python3 detector.py --image --filename ./data/images/human.jpg
+```
+
+**Notes:** The project includes four sample images for testing (dog_1.jpg, dog_2.jpg, human.jpg). They are located in **./data/images/**
 
 <a name="usage"></a>
+---
+
+#### Change input size
+
+Simply add the **--height** and **--width** flags to specify the size of the input frames
 
 Training
 --------
