@@ -20,6 +20,11 @@ sh yolov3_onnx/set_cuda.sh
 sh yolov3_onnx/install_pycuda.sh
 }
 
+download_samples(){
+echo "[BASH]  Start downloading sample videos for testing ..."
+sh download_samples.sh
+}
+
 start(){
 # add github part
 cd yolov3_onnx/
@@ -69,7 +74,10 @@ case "$VAL" in
         repo
         dependencies
         start
+        download_samples
         end=`date +%s`
+        echo "[BASH]  Installation finished"
+        echo "[INFO]  Enjoy!"
         echo "[BASH]  Execution time was `expr $end - $start` seconds"
         ;;
     [nN])
