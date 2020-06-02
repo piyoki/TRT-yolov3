@@ -1,0 +1,4 @@
+onnx==1.4.1
+protobuf==3.8.0
+numpy==1.16.0
+pycuda
