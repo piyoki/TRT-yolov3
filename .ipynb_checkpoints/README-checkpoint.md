@@ -1,5 +1,10 @@
 # TRT-yolov3
 
+![](https://img.shields.io/static/v1?label=Python&message=3.6&color=green)
+![](https://img.shields.io/static/v1?label=ONNX&message=1.4.1&color=yellow)
+![](https://img.shields.io/static/v1?label=TRT&message=6.0.1&color=orange)
+![](https://img.shields.io/static/v1?label=License&message=MIT&color=red)
+
 *** Copy Right 2020 Kevin Yu. All rights reserved.
 
 *** Author: Kevin Yu
