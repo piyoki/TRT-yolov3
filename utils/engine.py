@@ -43,8 +43,10 @@ def gen_colors(num_colors):
 def draw_text(img,cls_name,x_min,y_min):
     if len(cls_name) > 6 and len(cls_name) <= 8:
         width = len(cls_name) * 10 + 10
-    elif len(cls_name) > 8:
+    elif len(cls_name) > 8 and len(cls_name) <= 10:
         width = len(cls_name) * 10 + 5
+    elif len(cls_name) > 10:
+        width = len(cls_name) * 10 - 25
     else:
         width = len(cls_name) * 10 + 7
     cv2.rectangle(img, (x_min, y_min), (x_min+width, y_min-20), GREY, cv2.FILLED)
