@@ -40,8 +40,10 @@ def gen_colors(num_colors):
     return bgrs
 
 def draw_text(img,cls_name,x_min,y_min):
-    if len(cls_name) > 6:
-        width = len(cls_name)*10 - 25
+    if len(cls_name) > 6 and len(cls_name) <= 8:
+        width = len(cls_name) * 10 + 10
+    elif len(cls_name) > 8:
+        width = len(cls_name) * 10 - 25
     else:
         width = len(cls_name) * 10 + 5
     cv2.rectangle(img, (x_min, y_min), (x_min+width, y_min-20), (0,0,0), cv2.FILLED)

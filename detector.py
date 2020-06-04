@@ -51,7 +51,7 @@ def loop_and_detect(cam, runtime, trt_yolov3, conf_th, vis):
         if cv2.getWindowProperty(WINDOW_NAME, 0) < 0:
             break
         timer = cv2.getTickCount()
-        img = cam.read()
+        img = cam.read().copy()
         if img is not None:
             if runtime:
                 boxes, confs, clss, _preprocess_time, _postprocess_time,_network_time = trt_yolov3.detect(img, conf_th)
