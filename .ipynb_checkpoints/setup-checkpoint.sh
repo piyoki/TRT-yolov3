@@ -11,7 +11,7 @@ sh yolov3_onnx/set_cuda.sh
 sudo apt install python3-pip -y
 sudo -H pip3 install --upgrade pip
 sudo apt install protobuf-compiler libprotoc-dev -y
-sudo pip3 install -r requirements.txt
+pip3 install -r requirements.txt --user
 if [ "$?" -ne "0" ]
 then
    echo "[BASH]  Installation packages failed, quitting ..."
