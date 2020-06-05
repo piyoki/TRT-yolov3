@@ -28,10 +28,25 @@ Table of Contents
 Demo
 ----
 
+Hardware specs and training params: 
+
+- Device Name: NVIDIA Jetson AGX Xavier DevKit
+- Memory: 32G
+- Model: YOLOv3-tiny (Mask dataset)
+- Batch: 32 (recommended)
+- Subdivisions: 4 (recommended)
+- Maxbatches: 5000 epoches
+- Number of classes: 2
+- Total training time: 1.5 hrs
+
+![](../demo_screenshots/training.png)
+
 <a name="demo"></a>
 
 Train Model
 -----------
+
+The detailed steps are all demonstrated in the **[TRT-yolov3/train/training.ipynb](https://github.com/yqlbu/TRT-yolov3/blob/master/train/training.ipynb)**, if you carefully read and properly follow the steps, you should be able to train a YOLOv3 with your custom dataset.
 
 <a name="train-model"></a>
 
