@@ -30,6 +30,7 @@ Table of Contents
 * [Dependencies](#dependencies)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Train](#training)
 
 Demo
 ----
@@ -154,7 +155,9 @@ $ python3 detector.py --file --filename ./data/videos/cars.mp4 --model yolov3-ti
 Training
 --------
 
-Coming soon, please stay tuned.
+Please check out details [HERE](https://github.com/yqlbu/TRT-yolov3/tree/master/train)
+
+<a name="training"></a>
 
 Reference
 ---------
