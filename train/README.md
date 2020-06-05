@@ -127,14 +127,14 @@ In **detector.py**:
 
 YOLOv3 to ONNX
 ```bash
-python3 yolov3_onnx.py --model new_model
+$ python3 yolov3_onnx.py --model new_model
 # eg:
 # python3 yolov3_onnx.py --model yolov3-mask-tiny-416
 ```
 
 ONNX to TensorRT Engine
 ```bash
-python3 onnx_to_tensorrt.py --model new_model
+$ python3 onnx_to_tensorrt.py --model new_model
 # eg:
 # python3 onnx_to_tensorrt.py --model yolov3-mask-tiny-416
 ```
@@ -144,7 +144,7 @@ python3 onnx_to_tensorrt.py --model new_model
 Specify the new added model for inference with the **--model** flag
 
 ```bash
-python3 detector --usb --vid 0 --model new_model --runtime
+$ python3 detector --usb --vid 0 --model new_model --runtime
 ```
 
 Lisense
