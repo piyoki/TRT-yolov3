@@ -1,8 +1,8 @@
 [net]
-## Testing
+# Testing
 #batch=1
 #subdivisions=1
-## Training
+# Training
 batch=32
 subdivisions=4
 width=416
@@ -180,3 +180,4 @@ jitter=.3
 ignore_thresh = .7
 truth_thresh = 1
 random=1
+
