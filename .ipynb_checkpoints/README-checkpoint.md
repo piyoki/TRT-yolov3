@@ -11,7 +11,7 @@
 
 *** Release Date: 2020/06/02
 
-*** Update Time: 2020/06/05
+*** Update Time: 2020/06/15
 
 As of today, YOLOv3 stays one of the most popular object detection model architectures. Since NVIDIA already provided an Object Detection With The ONNX TensorRT Backend In Python (YOLOv3) sample code, it is possibly to implement YOLOv3 with TensorRT to massively accelerate the inference runtime. This repo demonstrates an example to apply TensorRT techniques to real-time Object Detection with YOLOv3, and YOLOv3-tiny models.
 
@@ -82,6 +82,22 @@ $ bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/set
 
 - The script will run for around 10-15 minutes. Please wait with patience.
 - If the script have successfully ran and finished without any errors, you may move on to test the results in the section below.
+
+#### Docker Support
+
+Now, the Docker version is online, whereas as for now, only the image for **Jetson L4T (ARM64) Platform** is supported. 
+
+```bash
+$ export DISPLAY=:0
+$ sudo xhost +si:localuser:root
+$ sudo docker run --runtime nvidia --network host --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix hikariai/l4t-trt-yolov3:<MODEL> bash
+```
+
+**Notes:** 
+- Please make sure you have a monitor connected to your device, or you have connected your device via VNC / Nomachine. 
+- The <MODEL> tag Specifies your jetson model, the available option can be found in [HERE](https://hub.docker.com/repository/docker/hikariai/l4t-trt-yolov3/tags?page=1). 
+- The container will lead you to a docker environment, but it does not make any difference when running the application. Simply follow [Usage](#usage) for guidance.
+- The inference with YOLOv3-416 is not well performed on the Jetson Nano, so I recommend using the YOLOv3-tiny instead, you may specify the YOLOv3-tiny model as input by adding **--model yolov3-tiny-416** in [CLI](#yolov3-tiny).
 
 <a name="installation"></a>
 
