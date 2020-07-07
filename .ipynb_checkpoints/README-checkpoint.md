@@ -123,7 +123,7 @@ $ sudo docker run --runtime nvidia --network host --rm -it -e DISPLAY=$DISPLAY -
 
 **Notes:** 
 - Please make sure you have a monitor connected to your device, or you have connected your device via VNC / Nomachine. 
-- The <MODEL> tag Specifies your jetson model, the available option can be found in [HERE](https://hub.docker.com/repository/docker/hikariai/l4t-trt-yolov3/tags?page=1). 
+- The **< MODEL >** tag specifies your jetson model, the available option can be found in [HERE](https://hub.docker.com/repository/docker/hikariai/l4t-trt-yolov3/tags?page=1). 
 - The container will lead you to a docker environment, but it does not make any difference when running the application. Simply follow [Usage](#usage) for guidance.
 - The inference with YOLOv3-416 is not well performed on the Jetson Nano, so I recommend using the YOLOv3-tiny instead, you may specify the YOLOv3-tiny model as input by adding **--model yolov3-tiny-416** in [CLI](#yolov3-tiny).
 
