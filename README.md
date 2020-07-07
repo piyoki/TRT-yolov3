@@ -83,9 +83,37 @@ $ bash <(wget -qO- https://raw.githubusercontent.com/yqlbu/TRT-yolov3/master/set
 - The script will run for around 10-15 minutes. Please wait with patience.
 - If the script have successfully ran and finished without any errors, you may move on to test the results in the section below.
 
-#### Docker Support
+### Docker Support
 
 Now, the Docker version is online, whereas as for now, only the image for **Jetson L4T (ARM64) Platform** is supported. 
+
+To setup nvidia-docker runtime as the default runtime, folow the steps bellow:
+
+```bash
+$ sudo apt install -y nvidia-docker2
+$ sudo nano /etc/docker/daemon.json
+```
+
+Copy & Paste the following content to **daemon.json**, then Save & Exit
+
+```json
+{
+  "default-runtime": "nvidia",
+  "runtimes": {
+     "nvidia": {
+       "path": "/usr/bin/nvidia-container-runtime",
+       "runtimeArgs": []
+       }
+     }
+}
+```
+
+```bash
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+```
+
+#### Run the container
 
 ```bash
 $ export DISPLAY=:0
