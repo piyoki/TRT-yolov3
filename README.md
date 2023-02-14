@@ -5,13 +5,13 @@
 ![](https://img.shields.io/static/v1?label=TRT&message=6.0.1&color=orange)
 ![](https://img.shields.io/static/v1?label=License&message=MIT&color=red)
 
-*** Copy Right 2020 Kevin Yu. All rights reserved.
+Copy Right 2020 Kevin Yu. All rights reserved.
 
-*** Author: Kevin Yu
+Author: Kevin Yu
 
-*** Release Date: 2020/06/02
+Release Date: 2020/04/25
 
-*** Update Time: 2020/06/15
+Last Update Time: 2020/06/15
 
 As of today, YOLOv3 stays one of the most popular object detection model architectures. Since NVIDIA already provided an Object Detection With The ONNX TensorRT Backend In Python (YOLOv3) sample code, it is possibly to implement YOLOv3 with TensorRT to massively accelerate the inference runtime. This repo demonstrates an example to apply TensorRT techniques to real-time Object Detection with YOLOv3, and YOLOv3-tiny models.
 
