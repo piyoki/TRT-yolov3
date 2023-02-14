@@ -4,7 +4,7 @@ set -e
 
 echo "Downloading YOLOv3 config and weights..."
 wget https://objectstorage.ca-toronto-1.oraclecloud.com/n/yzpqsgba6ssd/b/bucket-20200425-1646-weights/o/yolov3.cfg -q --show-progress --no-clobber
-wget https://hidden-boat-623a.keviny-cloud.workers.dev/DeepLearning/yolov3-weights/yolov3.weights -q --show-progress --no-clobber
+wget https://objectstorage.us-sanjose-1.oraclecloud.com/n/axdjylkbplt1/b/artifacts/o/yolov3.weights -q --show-progress --no-clobber
 
 echo
 echo "Creating YOLOv3-288, YOLOv3-416 and YOLOv3-608 configs..."
@@ -18,7 +18,7 @@ ln -sf yolov3.weights yolov3-608.weights
 echo
 echo "Downloading YOLOv3-tiny config and weights..."
 wget https://objectstorage.ca-toronto-1.oraclecloud.com/n/yzpqsgba6ssd/b/bucket-20200425-1646-weights/o/yolov3-tiny.cfg -q --show-progress --no-clobber
-wget https://hidden-boat-623a.keviny-cloud.workers.dev/DeepLearning/yolov3-weights/yolov3-tiny.weights -q --show-progress --no-clobber
+wget https://objectstorage.us-sanjose-1.oraclecloud.com/n/axdjylkbplt1/b/artifacts/o/yolov3-tiny.weights -q --show-progress --no-clobber
 
 echo
 echo "Creating YOLOv3-Tiny-288 and YOLOv3-Tiny-416 configs..."
